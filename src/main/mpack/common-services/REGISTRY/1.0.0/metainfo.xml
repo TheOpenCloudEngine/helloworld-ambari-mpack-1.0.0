@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<metainfo>
+  <schemaVersion>2.0</schemaVersion>
+  <services>
+    <service>
+      <name>HELLOWORLD</name>
+      <displayName>Hello World Flask Service</displayName>
+      <comment>A simple Flask application managed by Ambari</comment>
+      <version>1.0.0</version>
+      <components>
+        <component>
+          <name>HELLOWORLD_MASTER</name>
+          <displayName>Flask Server</displayName>
+          <category>MASTER</category>
+          <cardinality>1</cardinality>
+          <commandScript>
+            <script>scripts/helloworld_master.py</script>
+            <scriptType>PYTHON</scriptType>
+            <timeout>600</timeout>
+          </commandScript>
+        </component>
+      </components>
+      </service>
+  </services>
+</metainfo>

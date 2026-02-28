@@ -1,0 +1,43 @@
+{
+  "type" : "full-release",
+  "name" : "helloworld-ambari-mpack",
+  "version": "1.0.0",
+  "description" : "Ambari Management Pack for Registry by OpenCloudEngine",
+  "prerequisites": {
+    "min-ambari-version": "2.7.0",
+    "min-stack-versions": [
+      {
+        "stack_name": "BIGTOP",
+        "stack_version": "3.3"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "name" : "registry-service-definitions",
+      "type" : "service-definitions",
+      "source_dir": "common-services"
+    },
+    {
+      "name" : "registry-addon-services",
+      "type" : "stack-addon-service-definitions",
+      "source_dir": "addon-services",
+      "service_versions_map": [
+        {
+          "service_name" : "HELLOWORLD",
+          "service_version" : "1.0.0",
+          "applicable_stacks" : [
+            {
+              "stack_name" : "BIGTOP",
+              "stack_version" : "3.2"
+            },
+            {
+              "stack_name" : "BIGTOP",
+              "stack_version" : "3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

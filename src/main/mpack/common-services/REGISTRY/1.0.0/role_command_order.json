@@ -1,0 +1,10 @@
+{
+  "_comment" : "Record format:",
+  "_comment" : "blockedRole-blockedCommand: [blockerRole1-blockerCommand1, blockerRole2-blockerCommand2, ...]",
+  "general_deps" : {
+    "_comment" : "dependencies for all cases",
+    "REGISTRY_SERVER-START": ["NAMENODE-START", "RANGER_USERSYNC-START"],
+    "REGISTRY_SERVER_SERVICE_CHECK-SERVICE_CHECK": ["REGISTRY_SERVER-START"],
+    "REGISTRY_SERVER-RESTART": ["NAMENODE-RESTART", "RANGER_USERSYNC-RESTART"]
+  }
+}
