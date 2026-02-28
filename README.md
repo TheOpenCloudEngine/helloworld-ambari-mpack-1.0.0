@@ -1,0 +1,1 @@
+# helloworld-ambari-mpack-1.0.0
